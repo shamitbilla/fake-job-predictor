@@ -1,6 +1,6 @@
-streamlit==1.26.1
+streamlit
 scikit-learn==1.6.1
 tensorflow
-beautifulsoup4==4.12.2
-nltk==3.8.1
-joblib==1.3.2
+beautifulsoup4
+nltk
+joblib
