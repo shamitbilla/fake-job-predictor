@@ -16,6 +16,7 @@ def clean_text(text):
     text = soup.get_text()
     text = re.sub('\[[^]]*\]', '', text)
     text = re.sub('[^a-zA-Z\s]', '', text).lower()
+    nltk.download('stopwords')
 
     stop = set(stopwords.words('english'))
     text = ' '.join([word for word in text.split() if word not in stop])
