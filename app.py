@@ -10,6 +10,8 @@ import nltk
 # Load saved TF-IDF Vectorizer and ANN model
 tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
 model = load_model('fraudulent_job_model.keras')
+nltk.download('wordnet')
+nltk.download('stopwords')
 
 # Text cleaning function
 def clean_text(text):
@@ -17,7 +19,7 @@ def clean_text(text):
     text = soup.get_text()
     text = re.sub('\[[^]]*\]', '', text)
     text = re.sub('[^a-zA-Z\s]', '', text).lower()
-    nltk.download('stopwords')
+    
 
     stop = set(stopwords.words('english'))
     text = ' '.join([word for word in text.split() if word not in stop])
