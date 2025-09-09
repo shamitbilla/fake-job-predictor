@@ -5,6 +5,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import joblib
 from tensorflow.keras.models import load_model
+import nltk
 
 # Load saved TF-IDF Vectorizer and ANN model
 tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
